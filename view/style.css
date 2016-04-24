@@ -133,7 +133,7 @@ nav .brand-logo img {
 .home-inner {
   display: inline;
   float: left;
-  padding: 57px 100px;
+  padding: 31px 100px;
   text-align: center;
   position: relative;
   width: 100%;
@@ -142,10 +142,12 @@ nav .brand-logo img {
 
 .home-title{
   color: #fff;
-  font-size: 72px;
-  font-weight: 700;
+  font-size: 82px;
   margin-bottom: 15px;
-  text-transform: uppercase;
+
+  font-family: 'Great Vibes';
+  text-transform: none;
+  font-weight: normal;
 }
 
 
