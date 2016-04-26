@@ -8,19 +8,60 @@
        <!-- CSS  -->      
       <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
       <!-- Font Awesome -->
-      <link href="css/font-awesome.css" rel="stylesheet">
+      <link href="css/font-awesome.css" rel="stylesheet"/>
       <!-- Skill Progress Bar -->
       <link href="css/pro-bars.css" rel="stylesheet" type="text/css" media="all" />
       <!-- Owl Carousel -->
-      <link rel="stylesheet" href="css/owl.carousel.css">
+      <link rel="stylesheet" href="css/owl.carousel.css"/>
       <!-- Default Theme CSS File-->
       <link id="switcher" href="css/themes/blue-theme.css" type="text/css" rel="stylesheet" media="screen,projection"/>     
       <!-- Main css File -->
       <link href="style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
 
       <!-- Font -->
-      <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-      <link href='https://fonts.googleapis.com/css?family=Great+Vibes' rel='stylesheet' type='text/css'>
+      <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+      <link href='https://fonts.googleapis.com/css?family=Great+Vibes' rel='stylesheet' type='text/css'/>
+
+      <style type="text/css">
+        .agenda-event {
+          border-bottom: 1px dotted #ccc;
+          display: block;
+          margin-bottom: 15px;
+          overflow: hidden;
+        }
+        .pbm {
+          padding-bottom: 20px;
+        }
+        .agenda-event__when {
+          border: 1px solid #ccc;
+          border-radius: 6px;
+          float: left;
+          overflow: hidden;
+          text-align: center;
+          width: 80px;
+        }
+        .agenda-event__when__date {
+          background-color: #f5f5f5;
+          color: #999;
+          font-size: 11px;
+          font-weight: bold;
+          padding: 5px 0;
+        }
+        .agenda-event__when__date .day {
+          font-size: 22px;
+        }
+        .agenda-event__when__time {
+          background-color: #fff;
+          border-top: 1px solid #ccc;
+          color: #333;
+          font-size: 15px;
+          padding: 4px 0;
+        }
+        .agenda-event__cont {
+          padding: 0 0 0 100px;
+          position: relative;
+        }
+      </style>
     </head>
 
     <body>
@@ -102,6 +143,7 @@
                       <div class="col s12 m4 l3">
                         <div class="about-inner-left">
                           <img class="profile-img" src="img/grammont2.jpg" alt="Profile Image">
+                          <img class="profile-img" src="img/grammont4.jpg" alt="Profile Image">
                         </div>
                       </div>
                       <div class="col s12 m8 l9">
@@ -121,7 +163,6 @@
                                target="_blank">
                               <img src="img/domaine-de-grammont-3D.jpg"/>
                             </a>
-                            <!--a href="#" class="waves-effect waves-light btn-large resume-btn"><i class="mdi-content-archive left"></i> Download Resume</a-->
                           </div>
                         </div>
                       </div>
@@ -137,39 +178,99 @@
             <section id="skill">
               <div class="container">
                 <div class="skill-inner">
-                  <h2 class="title">Skills</h2>
-                  <p>The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here.It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English</p>
+                  <h2 class="title">Programme</h2>
+                  <div class="calendar-page">
+                    <div class="row">
+                      <div class="col s12 m12 l12">
+                        <div class="event-box js-item-to-hide row mtm">
+                          <div class="col-xs-12">
+                            <span id="list-schedules">
+                              <div data-id="107686" class="agenda-event js-element-wrapper pbm">
+                                <div class="agenda-event__when">
+                                  <div class="agenda-event__when__date">
+                                    <span class="day">06</span><br>
+                                    <span class="month">JUIL. 2016</span>
+                                  </div>
+                                  <div class="agenda-event__when__time">14:30</div>
+                                </div>
+                                <div class="agenda-event__cont">
+                                  <a rel="nofollow" href="#agendaMap" ref="aview_event_sc_107686" title="" class="button button--inline custom-link">
+                                    <h3 class="text-header text-header--big title-font">Mairie de Grammont</h3>
+                                  </a>
+                                  <p class="place">Mairie de Grammont - Avenue Albert Einstein 34000 Montpellier</p>
+                                  <div class="text js-item-to-hide">
+                                    <p>Afin de pouvoir assister à la cérémonie civile, merci de vous présenter 15 minutes avant l'heure annoncée.</p>
+                                    <p>Sortie d'autoroute "Montpellier centre" (numéro 29).</p>
+                                    <p>Un parking gratuit vous permettra d'accéder&nbsp;facilement au domaine.</p>
+                                  </div>
+                                </div>
+                              </div><!--agenda-event-->
+                              <div data-id="108203" class="agenda-event js-element-wrapper pbm">
+                                <div class="agenda-event__when">
+                                  <div class="agenda-event__when__date">
+                                    <span class="day">11</span><br>
+                                    <span class="month">JUIL. 2015</span>
+                                  </div>
+                                  <div class="agenda-event__when__time">17:00</div>
+                                </div>
+                                <div class="agenda-event__cont">
+                                  <a rel="nofollow" href="#agendaMap" ref="aview_event_sc_108203" title="" class="button button--inline custom-link">
+                                    <h3 class="text-header text-header--big title-font">Cérémonie laïque</h3>
+                                  </a>
+                                  <p class="place">Mas Des Violettes - Hameau de Gourdou, 34270 Valflaunès, France</p>
+                                  <div class="text js-item-to-hide">
+                                    <p>http://masdesviolettes.com/</p>
+                                  </div>
+                                </div>
+                              </div><!--agenda-event-->
+                              <div data-id="108202" class="agenda-event js-element-wrapper pbm">
+                                <div class="agenda-event__when">
+                                  <div class="agenda-event__when__date">
+                                    <span class="day">11</span><br>
+                                    <span class="month">JUIL. 2015</span>
+                                  </div>
+                                  <div class="agenda-event__when__time">18:00</div>
+                                </div>
+                                <div class="agenda-event__cont">
+                                  <a rel="nofollow" href="#agendaMap" ref="aview_event_sc_108202" title="" class="button button--inline custom-link">
+                                    <h3 class="text-header text-header--big title-font">Vin d'honneur</h3>
+                                  </a>
+                                  <p class="place">Mas Des Violettes - Hameau de Gourdou, 34270 Valflaunès, France</p>
+                                  <div class="text js-item-to-hide">
+                                    <p>http://masdesviolettes.com/</p>
+                                  </div>
+                                </div>
+                              </div><!--agenda-event-->
+                              <div data-id="111431" class="agenda-event js-element-wrapper pbm">
+                                <div class="agenda-event__when">
+                                  <div class="agenda-event__when__date">
+                                    <span class="day">11</span><br>
+                                    <span class="month">JUIL. 2015</span>
+                                  </div>
+                                  <div class="agenda-event__when__time">20:00</div>
+                                </div>
+                                <div class="agenda-event__cont">
+                                  <a rel="nofollow" href="#agendaMap" ref="aview_event_sc_111431" title="" class="button button--inline custom-link">
+                                    <h3 class="text-header text-header--big title-font">Fin du vin d'honneur</h3>
+                                  </a>
+                                  <p class="place">Mas Des Violettes - Hameau de Gourdou, 34270 Valflaunès, France</p>
+                                  <div class="text js-item-to-hide">
+                                    <p>http://masdesviolettes.com/</p>
+                                  </div>
+                                </div>
+                              </div><!--agenda-event-->
+                            </span>
+                            <div class="event-box map__separator pts">
 
-                  <!-- Start skills progress bar -->
-
-                  <div class="skill-progress-bar">
-                    <span>Html5</span>
-                    <div class="pro-bar-container color-wisteria">
-                      <div class="pro-bar bar-100 color-amethyst" data-pro-bar-percent="100"></div>
-                    </div>
-                    <span>css</span>
-                    <div class="pro-bar-container color-wisteria">
-                      <div class="pro-bar bar-90 color-amethyst" data-pro-bar-percent="90" data-pro-bar-delay="100"></div>
-                    </div>
-                    <span>Photoshop</span>
-                    <div class="pro-bar-container color-wisteria">
-                      <div class="pro-bar bar-80 color-amethyst" data-pro-bar-percent="80" data-pro-bar-delay="200"></div>
-                    </div>
-                    <span>Illustrator</span>
-                    <div class="pro-bar-container color-wisteria">
-                      <div class="pro-bar bar-70 color-amethyst" data-pro-bar-percent="70" data-pro-bar-delay="300"></div>
-                    </div>
-                    <span>Wordpress</span>
-                    <div class="pro-bar-container color-wisteria">
-                      <div class="pro-bar bar-60 color-amethyst" data-pro-bar-percent="60" data-pro-bar-delay="400"></div>
-                    </div>
-                    <span>jQuery</span>
-                    <div class="pro-bar-container color-wisteria">
-                      <div class="pro-bar bar-50 color-amethyst" data-pro-bar-percent="50" data-pro-bar-delay="500"></div>
+                              <!--map-wrapper-->
+                            </div>
+                          </div>
+                        </div>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
             </section>
             <!-- Start Experience -->
             <section id="experience">
