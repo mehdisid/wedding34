@@ -112,7 +112,7 @@ nav .brand-logo img {
 
 
 #home {
-  background-image: url("img/grammont1.jpg");
+  background-image: url("img/IMG_20150618_111945.jpg");
   background-position: 100% 100%;
   background-size: 100% 100%;
   display: inline;
@@ -276,11 +276,12 @@ nav .brand-logo img {
 
 
 #skill{
-  background-color: #fff;  
+  background-color: #fffff0;  
   display: inline;
   padding: 60px 0;
   float: left;
   width: 100%;
+  border-top: 1px dotted #b1b1b1;
 }
 
 
