@@ -369,7 +369,7 @@ nav .brand-logo img {
 .experience-slider{
   display: inline;
   float: left;
-  margin-top: 55px;
+  margin-top: 20px;
   padding-left: 20px;
   width: 100%;
 }
@@ -415,14 +415,14 @@ nav .brand-logo img {
 
 .prev {
   left: 3%;
-  margin-top: 15.5%;
+  margin-top: 90px;
   position: absolute;
 }
 
 
 .next{
   right: 3%;
-  margin-top: 15.5%;
+  margin-top: 90px;
   position: absolute;
 }
 
