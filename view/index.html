@@ -24,9 +24,6 @@
         <div class="navbar-fixed">
           <nav>
             <div class="container">
-              <audio src="music/music1.mp3" controls loop style="position: absolute;top: 0;left: 0;opacity: 0.3;background: blue;">
-                <p>If you are reading this, it is because your browser does not support the audio element.</p>
-              </audio>
               <div class="nav-wrapper">
                 <ul class="right hide-on-med-and-down custom-nav menu-scroll">
                   <li><a href="#about">Accueil</a></li>
@@ -934,7 +931,24 @@
                   <div class="col s12">
                     <div class="footer-inner">
                       <button class="btn-floating btn-large up-btn"><i class="mdi-navigation-expand-less"></i></button>
-                     <p class="design-info">Copyright © 2016</p>
+                     
+                      <div id="audioplayer" style="margin-top: 20px;">
+                         <audio id="audio" preload="auto" tabindex="0" controls="" type="audio/mpeg">
+                          <source type="audio/mp3" src="music/tamacun.mp3"/>
+                            Sorry, your browser does not support HTML5 audio.
+                        </audio>
+                        <ul id="playlist">
+                            <li class="active"><a href="music/tamacun.mp3">Rodrigo y Gabriela - Tamacun.</a></li>
+                            <li><a href="music/outoftimeman.mp3">Breaking Bad - Out of Time Man</a></li>
+                            <li><a href="music/beverlyhills1.mp3">Beverly Hills Cop 1</a></li>
+                            <li><a href="music/beverlyhills3.mp3">Beverly Hills Cop 3</a></li>
+                            <li><a href="music/beethoven-moonlight-sonata.mp3">Beethoven Moonlight Sonata</a></li>
+                            <li><a href="music/bolero.mp3">Bolero</a></li>
+                            <li><a href="music/canonind.mp3">Johann Pachelbel - Canon in D Major</a></li>
+                        </ul>
+                      </div><br/>
+                      <p class="design-info">Copyright © 2016</p>
+
                     </div>
                   </div>
                 </div>
@@ -960,6 +974,7 @@
             closeOnContentClick: true,
             //closeBtnInside: false,
             fixedContentPos: true,
+            autoFocusLast:false,
             mainClass: 'mfp-with-zoom', // class to remove default margin from left and right side
             image: {
               verticalFit: true
@@ -969,6 +984,48 @@
               duration: 300 // don't foget to change the duration also in CSS
             }
           });
+
+          //audio
+          var audio;
+          var playlist;
+          var tracks;
+          var current;
+
+          function initMusic(){
+            current = 0;
+            audio = $('#audio');
+            playlist = $('#playlist');
+            tracks = playlist.find('li a');
+            len = tracks.length - 1;
+            audio[0].volume = .30;
+            //audio[0].play();
+            playlist.find('a').click(function(e){
+              e.preventDefault();
+              var link = $(this);
+              current = link.parent().index();
+              runMusic(link, audio[0]);
+            });
+            audio[0].addEventListener('ended',function(e){
+              current++;
+              if(current == len){
+                  current = 0;
+                  link = playlist.find('a')[0];
+              }else{
+                  link = playlist.find('a')[current];    
+              }
+              runMusic($(link),audio[0]);
+            });
+          }
+          function runMusic(link, player){
+                  player.src = link.attr('href');
+                  par = link.parent();
+                  par.addClass('active').siblings().removeClass('active');
+                  audio[0].load();
+                  audio[0].play();
+          }
+          initMusic();
+
+
         });
       </script>
     </body>

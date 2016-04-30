@@ -1840,6 +1840,33 @@ textarea.materialize-textarea {
         .gallery-div {
           height: 170px;
         }
+
+
+        #playlist,audio{
+          background: #78ADC9;
+          width: 350px;
+          opacity: 0.85;
+        }
+        #playlist {
+          margin: 0pt auto;
+          font-size: 12px;
+          text-align: center;
+          max-height: 200px;
+          overflow: auto;
+        }
+        #audioplayer .active a{
+          color:#5DB0E6;
+          text-decoration:none;
+        }
+        #audioplayer li a{
+          color:#eeeedd;
+          background:#333;
+          padding:5px;
+          display:block;
+        }
+        #audioplayer li a:hover{
+          text-decoration:none;
+        }
 /*----END CUSTOM----------*/
 
 
