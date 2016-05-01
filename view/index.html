@@ -947,11 +947,19 @@
                         <ul id="playlist">
                             <li class="active"><a href="music/tamacun.mp3">Rodrigo y Gabriela - Tamacun.</a></li>
                             <li><a href="music/outoftimeman.mp3">Breaking Bad - Out of Time Man</a></li>
-                            <li><a href="music/beverlyhills1.mp3">Beverly Hills Cop 1</a></li>
-                            <li><a href="music/beverlyhills3.mp3">Beverly Hills Cop 3</a></li>
-                            <li><a href="music/beethoven-moonlight-sonata.mp3">Beethoven Moonlight Sonata</a></li>
-                            <li><a href="music/bolero.mp3">Bolero</a></li>
-                            <li><a href="music/canonind.mp3">Johann Pachelbel - Canon in D Major</a></li>
+                            <li><a href="music/BoleChudiyan.mp3">Bole Chudiyan - Bharati</a></li>
+                            <li><a href="music/WhatAreWordsThePianoGuys.mp3">What Are Words - ThePianoGuys</a></li>
+                            <li><a href="music/HarryPotterIndianJam.mp3">Harry Potter - The Indian Jam Project</a></li>
+                            <li><a href="music/LennonStellaMaisyStella.mp3">Lennon Stella &amp; Maisy Stella - Ho Hey</a></li>
+                            <li><a href="music/BlackColour.mp3">Black is the colour</a></li>
+                            <li><a href="music/WhenComesAlong.mp3">When the Right One Comes Along</a></li>
+                            <li><a href="music/MythbustersTheme.mp3">Mythbusters Theme</a></li>
+                            <li><a href="music/InglouriousBasterds.mp3">Inglourious Basterds</a></li>
+                            <li><a href="music/LastOfTheMohicans.mp3">Last Of The Mohicans</a></li>
+                            <li><a href="music/Gladiator.mp3">Gladiator</a></li>
+                            <li><a href="music/HansZimmerOneDay.mp3">Pirates of the Carribean - Ends</a></li>
+                            <li><a href="music/PiratesoftheCaribbeanUpIsDown.mp3">Pirates of the Caribbean - Up Is Down</a></li>
+                            <li><a href="music/MonnomestPersonne.mp3">Mon nom est Personne - La horde sauvage</a></li>
                         </ul>
                       </div><br/>
                       <p class="design-info">Copyright © 2016</p>
@@ -1003,7 +1011,7 @@
             audio = $('#audio');
             playlist = $('#playlist');
             tracks = playlist.find('li a');
-            len = tracks.length - 1;
+            length = tracks.length;
             audio[0].volume = .30;
             //audio[0].play();
             playlist.find('a').click(function(e){
@@ -1014,11 +1022,12 @@
             });
             audio[0].addEventListener('ended',function(e){
               current++;
-              if(current == len){
+              if(current == length){
                   current = 0;
                   link = playlist.find('a')[0];
               }else{
                   link = playlist.find('a')[current];    
+
               }
               runMusic($(link),audio[0]);
             });
