@@ -1867,6 +1867,11 @@ textarea.materialize-textarea {
         #audioplayer li a:hover{
           text-decoration:none;
         }
+        ul.grauduroi li {
+          list-style-type: arabic-indic;
+          font-size: 14px;
+          margin-left: 30pt;
+        }
 /*----END CUSTOM----------*/
 
 
